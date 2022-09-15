@@ -87,8 +87,6 @@ rerun:
     }
   }
 
-bool play_again = true;
-
 cout << "\n====================\n";
 cout << "PLAY AGAIN? Y/N \n\n\n\n\n";
 
