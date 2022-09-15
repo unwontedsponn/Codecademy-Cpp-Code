@@ -1,0 +1,104 @@
+#include <iostream>
+#include <stdlib.h>
+
+using namespace std;
+
+int main () {
+
+  // Rock, paper and scissors game
+  
+  srand (time(NULL));
+  
+  int computer = rand() % 3 + 1;
+  
+  int user = 0;
+  
+rerun:
+  cout << "====================\n";
+  cout << "Rock paper scissors!\n";
+  cout << "====================\n";
+
+  cout << "1) Rock\n";
+  cout << "2) Paper\n";
+  cout << "3) Scissors\n";
+
+  cout << "\n-------shoot!-------\n\n";
+
+  cin >> user;
+
+  cout << "--------------------\n";
+
+  if (user == 1) {
+    cout << "You choose Rock\n";
+  }
+  else if (user == 2) {
+    cout << "You choose Paper\n";
+  }
+  else {
+    cout << "You choose Scissors\n";
+  }
+    
+
+  if (computer == 1) {
+    cout << "CPU chooses Rock\n";
+  }
+  else if (computer == 2) {
+    cout << "CPU chooses Paper\n";
+  }
+  else {
+    cout << "CPU chooses Scissors\n";
+  }
+
+
+  if (user ==  computer) {
+    cout << "--------------------\n";
+    cout << "Draw!\n";
+  }
+
+  else if (user == 1) {
+    if (computer == 2) {
+      cout << "--------------------\n";
+      cout << "You lose!\n";
+    }
+    if (computer == 3) {
+      cout << "--------------------\n";
+      cout << "You win!\n";
+    }
+  }
+
+  else if (user == 2) {
+    if (computer == 1) {
+      cout << "--------------------\n";
+      cout << "You win!\n";
+    }
+    if (computer == 3) {
+      cout << "--------------------\n";
+      cout << "You lose!\n";
+    }
+  }
+  else if (user == 3) {
+    if (computer == 1) {
+      cout << "--------------------\n";
+      cout << "You lose!\n";
+    }
+    if (computer == 2) {
+      cout << "--------------------\n";
+      cout << "You win!\n";
+    }
+  }
+
+bool play_again = true;
+
+cout << "\n====================\n";
+cout << "PLAY AGAIN? Y/N \n\n\n\n\n";
+
+string yorn;
+cin >> yorn;
+
+  if (yorn == "Y" || yorn == "y")
+    goto rerun;
+
+    else
+      return 0;
+
+}
