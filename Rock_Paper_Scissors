@@ -90,10 +90,10 @@ rerun:
 cout << "\n====================\n";
 cout << "PLAY AGAIN? Y/N \n\n\n\n\n";
 
-string yorn;
-cin >> yorn;
+string y_or_n;
+cin >> y_or_n;
 
-  if (yorn == "Y" || yorn == "y")
+  if (y_or_n == "Y" || y_or_n == "y")
     goto rerun;
 
     else
