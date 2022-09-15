@@ -3,16 +3,16 @@
 
 using namespace std;
 
+// Rock, paper and scissors game
 int main () {
 
-  // Rock, paper and scissors game
-  
+  // Generate random number for computer between 1-3
   srand (time(NULL));
-  
   int computer = rand() % 3 + 1;
-  
+  // Variable for user input
   int user = 0;
   
+  // Program starts and will rerun from here
 rerun:
   cout << "====================\n";
   cout << "Rock paper scissors!\n";
@@ -25,9 +25,9 @@ rerun:
   cout << "\n-------shoot!-------\n\n";
 
   cin >> user;
-
   cout << "--------------------\n";
 
+// User input
   if (user == 1) {
     cout << "You choose Rock\n";
   }
@@ -38,7 +38,7 @@ rerun:
     cout << "You choose Scissors\n";
   }
     
-
+// Computer input
   if (computer == 1) {
     cout << "CPU chooses Rock\n";
   }
@@ -49,7 +49,7 @@ rerun:
     cout << "CPU chooses Scissors\n";
   }
 
-
+// Results
   if (user ==  computer) {
     cout << "--------------------\n";
     cout << "Draw!\n";
@@ -87,16 +87,15 @@ rerun:
     }
   }
 
+// Option to replay or end
 cout << "\n====================\n";
 cout << "PLAY AGAIN? Y/N \n\n\n\n\n";
 
 string y_or_n;
 cin >> y_or_n;
 
-  if (y_or_n == "Y" || y_or_n == "y")
+  if (y_or_n == "Y" || y_or_n == "y") {
     goto rerun;
-
-    else
+  } else
       return 0;
-
 }
