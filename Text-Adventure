@@ -1,0 +1,107 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+
+int option1 = 0;
+int option1a = 0;
+int option1b = 0;
+int folds = 0;
+
+  cout << "===========================\n";
+  cout << "Adventures of Benjamin Pine\n";
+  cout << "===========================\n\n";
+  
+  cout << "Ben wakes drowsily, and wonders how to energise himself.\n\n";
+
+  cout << "Choose a number for Ben...\n";
+  cout << "1. A jog. | 2. A coffee.\n\n";
+
+  cin >> option1;
+  cout << "\n";
+
+if (option1 == 1) {
+  cout << "-------------------------------------------\n";
+  cout << "Ben decides to be healthy and heads out for a jog.\n";
+  cout << "But on his journey he encounters a wounded pigeon.\n\n";
+
+  cout << "Should Ben help the pigeon, or continue his jog?\n";
+  cout << "Choose a number for Ben...\n";
+  cout << "1. Y | 2. N \n\n";
+  cin >> option1a;
+  cout << "\n";
+  }
+
+  if (option1a == 2) {
+    cout << "-------------------------------------------\n";
+    cout << "Ben jogs into a busy street and gets hit by a car. Goodbye Ben!\n";
+  }
+
+if (option1 == 2) {
+  cout << "-------------------------------------------\n";
+  cout << "Ben decides to be unhealthy and drinks his coffee.\n";
+  cout << "Suddenly, a pigeon flies into his window and hurts itself.\n\n";
+
+  cout << "Should Ben help the pigeon, or continue his coffee? 1. Y | 2. N \n";
+  cin >> option1b;
+  cout << "\n\n";
+  }
+
+if (option1b == 2) {
+  cout << "-------------------------------------------\n";
+  cout << "Ben shuts his eyes and falls back asleep. Goodnight Ben!\n\n";
+}
+
+if (option1a == 1 || option1b == 1) {
+cout << "-------------------------------------------\n";
+cout << "The pigeon had a broken wing! But also kept trying to fly in a panic.\n";
+cout << "So Ben decided it needed to be wrapped up it in a towel to be kept safe.\n\n";
+
+cout << "But Ben realised that if he didn't wrap the bird enough it would wriggle out. Or, if he wrapped it too much, it would die.\n\n";
+
+cout << "Choose the correct amount of folds for the bird to be safe between 1-6:\n\n";
+
+cin >> folds;
+cout << "\n";
+}
+
+switch (folds) {
+  case 1:
+    cout << "The bird slips free.\n";
+    cout << "Ben fails for the day!\n";
+    cout << "----------------------\n";
+    break;
+  case 2:
+    cout << "The bird wriggles free.\n";
+    cout << "Ben fails for the day!\n";
+    cout << "----------------------\n";
+    break;
+  case 3:
+    cout << "The bird struggles, then breaks free.\n";
+    cout << "Ben fails for the day!\n";
+    cout << "----------------------\n";
+    break;
+  case 4:
+    cout << "The bird struggles a lot! But also makes it free.\n";
+    cout << "Ben fails for the day!\n";
+    cout << "----------------------\n";
+    break;
+  case 5:
+    cout << "The correct amount! The bird feels snug and goes to sleep.\n\n";
+  
+  cout << "=====================\n";
+  cout << "Ben saves the day!\n";
+  cout << "=====================\n";
+    break;
+  case 6:
+    cout << "The bird is too tight and dies.\n";
+    cout << "Ben fails for the day!\n";
+    cout << "----------------------\n";
+    break;
+}
+
+return 0;
+
+}
